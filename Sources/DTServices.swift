@@ -9,15 +9,15 @@ import Foundation
 import UIKit
 import SystemConfiguration
 
-enum MethodType: String{
+public enum MethodType: String{
     case post = "POST"
     case get = "GET"
     case put = "PUT"
     case delete = "DELETE"
 }
 
-class DTServices{
-    static let sharedInstance = DTServices()
+public class DTServices{
+    public static let sharedInstance = DTServices()
     var loaderDelegate: LoaderStartStopDelegate?
     var networkIssueDelegate: NetworkIssueDelegate?
     var popupDelegate: PopupDelegate?
@@ -30,7 +30,7 @@ class DTServices{
         }
     }
     
-    func request(methodType: MethodType, api: String, param :Dictionary<String , AnyObject>, completion : @escaping(_ success: Bool, _ jsonObject : AnyObject?, _ configError: Bool) -> ())
+    public func request(methodType: MethodType, api: String, param :Dictionary<String , AnyObject>, completion : @escaping(_ success: Bool, _ jsonObject : AnyObject?, _ configError: Bool) -> ())
     {
         if  getBaseUrl() != ""{
             let reqApi = getBaseUrl() + api
