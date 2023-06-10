@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'DTCoreServices'
-s.version          = '1.0.0' 
+s.version          = '1.0.1' 
 s.summary          = 'Custom pod creation for iOS' 
 s.description      = <<-DESC "To use api request and response call"
 DTCore library!
